@@ -1,8 +1,8 @@
 <!-- Slot with item -->
 <li
-  class="inventory-group__list-item"
+  class="inventory-group__list-item inventory-group__list-item--regular"
   *ngIf="props.item"
-  [ngStyle]="{ background: 'url(' + props.item.image + ')' }"
+  [ngStyle]="{ 'background-image': 'url(' + props.item.image + ')' }"
 ></li>
 
 <!-- Empty slot -->

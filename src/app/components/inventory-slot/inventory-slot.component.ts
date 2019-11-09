@@ -12,7 +12,5 @@ export class InventorySlotComponent implements OnInit {
   @Input()
   props: Slot;
 
-  ngOnInit() {
-    console.log(this.props);
-  }
+  ngOnInit() {}
 }

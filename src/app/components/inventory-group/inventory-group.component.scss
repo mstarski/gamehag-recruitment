@@ -1,0 +1,17 @@
+@import "src/utilities.scss";
+
+.inventory-group {
+  padding: 2rem;
+  &__header {
+    color: #00ecb3;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, px-to-rem(80));
+    grid-gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+}
