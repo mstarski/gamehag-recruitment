@@ -6,5 +6,5 @@ export class Item {
   image: string;
   group: GroupName;
   value?: number;
-  cdKey?: number;
+  cdKey?: string;
 }
