@@ -29,7 +29,7 @@ const randomCDKeyTwo: Item = {
   group: "Nagrody"
 };
 
-export const chests: Group = {
+const chests: Group = {
   name: "Skrzynie",
   slots: [
     {
@@ -55,7 +55,7 @@ export const chests: Group = {
   ]
 };
 
-export const runes: Group = {
+const runes: Group = {
   name: "Runy",
   slots: [
     {
@@ -81,7 +81,7 @@ export const runes: Group = {
   ]
 };
 
-export const rewards: Group = {
+const rewards: Group = {
   name: "Nagrody",
   slots: [
     {
@@ -106,3 +106,5 @@ export const rewards: Group = {
     }
   ]
 };
+
+export const db = [chests, runes, rewards];
