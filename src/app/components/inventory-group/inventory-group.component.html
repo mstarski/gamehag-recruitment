@@ -1,1 +1,11 @@
-<p>inventory-group works!</p>
+<div class="inventory-group">
+  <p class="inventory-group__header">
+    {{ groupName }}
+  </p>
+  <ul class="inventory-group__list">
+    <app-inventory-slot
+      *ngFor="let slot of slots"
+      [props]="slot"
+    ></app-inventory-slot>
+  </ul>
+</div>

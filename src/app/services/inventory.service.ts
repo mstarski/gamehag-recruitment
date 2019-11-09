@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
 import { db } from "../mock/db";
-import { Group } from "../typedefs/Group";
+import { Slot } from "../typedefs/Slot";
 import { GroupName } from "../typedefs/GroupName";
 import { Item } from "../typedefs/Item";
 
@@ -15,8 +15,8 @@ export class InventoryService {
     return of(db.map(group => group.name));
   }
 
-  getGroupSlots(groupName: GroupName): Observable<Group> {
-    return of(db.find(group => group.name === groupName));
+  getGroupSlots(groupName: GroupName): Observable<Slot[]> {
+    return of(db.find(group => group.name === groupName).slots);
   }
 
   addItem(groupName: GroupName, item: Item): void {
