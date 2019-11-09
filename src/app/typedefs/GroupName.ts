@@ -1,1 +1,1 @@
-export type GroupName = "chests" | "runes" | "rewards";
+export type GroupName = "Skrzynie" | "Runy" | "Nagrody";
