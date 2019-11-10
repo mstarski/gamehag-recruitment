@@ -6,5 +6,6 @@
   @media (max-width: 825px) {
     height: auto;
     display: flex;
+    flex-flow: column;
   }
 }
