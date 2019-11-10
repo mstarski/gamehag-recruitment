@@ -19,11 +19,8 @@ export class InventoryService {
     return of(db.find(group => group.name === groupName).slots);
   }
 
-  addItem(groupName: GroupName, item: Item): void {
-    if (item.group !== groupName)
-      throw new Error("Target group's name doesn't match item's group name.");
-
-    const groupIndex = db.findIndex(group => group.name === groupName);
+  addItem(item: Item): void {
+    const groupIndex = db.findIndex(group => group.name === item.group);
     const freeSlotIndex = db[groupIndex].slots.findIndex(
       slot => slot.item === null
     );
@@ -36,7 +33,7 @@ export class InventoryService {
   removeItem(item: Item): void {
     const groupIndex = db.findIndex(group => group.name === item.group);
     const itemIndex = db[groupIndex].slots.findIndex(
-      slot => slot.item.id === item.id
+      slot => slot.item && slot.item.id === item.id
     );
 
     db[groupIndex].slots[itemIndex].item = null;
