@@ -1,1 +1,22 @@
-<p>preview works!</p>
+<div class="preview">
+  <div *ngIf="selectedItem" class="preview__item-showcase">
+    <h1 *ngIf="selectedItem.group === 'Skrzynie'" class="preview__item-name">
+      {{ selectedItem.name }}
+    </h1>
+    <div
+      class="preview__item-sprite"
+      [ngStyle]="{ 'background-image': 'url(' + selectedItem.image + ')' }"
+    ></div>
+
+    <button
+      *ngIf="selectedItem.group === 'Skrzynie'"
+      class="preview__open-chest-btn"
+    >
+      OTWORZ SKRZYNIE
+    </button>
+    <div *ngIf="selectedItem.group === 'Nagrody'" class="preview__cd-key">
+      <span>KLUCZ</span>
+      <p>{{ selectedItem.cdKey }}</p>
+    </div>
+  </div>
+</div>

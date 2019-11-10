@@ -1,6 +1,7 @@
 <!-- Slot with item -->
 <li
   class="inventory-group__list-item inventory-group__list-item--regular"
+  (click)="selectSlot($event, props.item)"
   *ngIf="props.item"
   [ngStyle]="{ 'background-image': 'url(' + props.item.image + ')' }"
 ></li>
