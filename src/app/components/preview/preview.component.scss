@@ -8,6 +8,10 @@
   align-items: center;
   position: relative;
 
+  @media (max-width: 660px) {
+    padding: 1rem;
+  }
+
   &__item-name {
     text-align: center;
     color: #fff;
@@ -16,12 +20,16 @@
   }
 
   &__item-sprite {
-    width: 400px;
-    height: 250px;
+    width: px-to-rem(400);
+    height: px-to-rem(250);
     background-size: cover;
     background-position: center;
     object-fit: cover;
     margin: 4rem auto;
+
+    @media (max-width: 440px) {
+      width: px-to-rem(300);
+    }
   }
 
   &__open-chest-btn {
@@ -59,6 +67,17 @@
       color: #00ecb3;
       text-align: center;
       margin-bottom: px-to-rem(5);
+    }
+  }
+
+  &__nothing-selected {
+    display: none;
+    color: #fff;
+    opacity: 0.2;
+    font-weight: bold;
+
+    @media (max-width: 825px) {
+      display: block;
     }
   }
 }
