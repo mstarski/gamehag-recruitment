@@ -10,6 +10,10 @@ export class RewardingService {
 
   lootFromChest(): Item {
     const randomIndex = Math.floor(Math.random() * prizePool.length);
-    return prizePool[randomIndex];
+    const reward = prizePool[randomIndex];
+
+    prizePool.splice(randomIndex, 1);
+
+    return reward;
   }
 }
