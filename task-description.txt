@@ -1,0 +1,31 @@
+Zadanie polega na stworzeniu prostego widoku ekwipunku. Ekwipunek składa się z dwóch części:
+a) Listy przedmiotów - eq-view.png
+b) Widok aktualnie wybranego przedmiotu
+- Zaznaczona skrzynia - single-chest-active.png
+- Zaznaczony przedmiot - single-reward-active.png
+
+Wytyczne:
+a) Projekt musi działać prawidłowo na wszystkich popularnych przeglądarkach
+b) Warstwa widoku ma być oddzielona od warstwy danych. Innymi słowy - przedmioty mają być zamockowane w modelu w komponencie.
+c) Grid, na którym opiera się lista przedmiotów musi być responsywny (szerokość kontenera jest skalowalna)
+d) Przedmioty mają następujące właściwości:
+- obrazek
+- nazwę
+- typ (nagroda lub skrzynia)
+- cenę (wartość)
+- opcjonalnie klucz (w nagrodach)
+e) Przedmioty w ekwipunku mają podział na kategorie: skrzynie i nagrody (runy można pominąć)
+f) W kategorii nagród widnieje sekcja "Wartość ~ X" - jest to suma wartości nagród w tej kategorii
+g) Wybranie przedmiotu typu "nagroda" daje możliwość podejrzenia jej klucza
+h) Wybranie nagrody typu skrzynia daje możliwość jej otwarcia. Powoduje to dodanie kopii losowej nagrody z ekwipunku i usunięcie skrzyni z ekwipunku.
+
+Preferowany stack:
+- Angular
+- Typescript
+- SCSS
+
+Wskazówki:
+- Cały widok można stworzyć bez korzystania z obrazków, za wyjątkiem przedmiotów. Wykorzystaj przykładowe obrazki skrzyni i nagród "sample-chest.png" i "sample-reward.png" 
+- Projekt graficzny nie musi mieć odwzorowania 1:1, wszelkie wymiary nie muszą się tutaj pokrywać.
+- Zadanie to ma na celu zweryfikować Twoje podejście do niektórych problemów, ciekawe rozwiązania, a niekoniecznie przedstawienie "gotowego produktu". Jeśli więc jakiś fragment zajmuje Ci za dużo czasu - pomiń go i przejdź dalej. Chcielibyśmy bowiem, aby zadanie nie zajęło Ci więcej niż 4 godziny.
+- Korzystaj z dobrych praktyk. Pamiętaj o rozszerzalności, komponentyzacji. Mimo, że projekt nie musi być idealnym odwzorowaniem, to jednak potraktuj go tak, jakby miał być użyty i rozwijany w dużym projekcie
