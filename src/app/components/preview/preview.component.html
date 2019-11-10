@@ -1,5 +1,6 @@
 <div class="preview">
   <div *ngIf="selectedItem" class="preview__item-showcase">
+    <div (click)="closePreview($event)" class="close-btn">&times;</div>
     <h1 *ngIf="selectedItem.group === 'Skrzynie'" class="preview__item-name">
       {{ selectedItem.name }}
     </h1>

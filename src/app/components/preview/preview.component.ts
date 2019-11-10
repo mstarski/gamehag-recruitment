@@ -12,6 +12,10 @@ export class PreviewComponent implements OnInit {
 
   selectedItem: Item;
 
+  closePreview(_: MouseEvent): void {
+    this.actionService.clearItemSelection();
+  }
+
   ngOnInit() {
     this.actionService.selectedItem.subscribe(
       data => (this.selectedItem = data)

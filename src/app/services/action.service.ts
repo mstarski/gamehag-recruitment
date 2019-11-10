@@ -14,4 +14,8 @@ export class ActionService {
   selectItem(item: Item): void {
     this.selectedItemSource.next(item);
   }
+
+  clearItemSelection(): void {
+    this.selectedItemSource.next(null);
+  }
 }

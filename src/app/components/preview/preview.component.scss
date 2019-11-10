@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   &__item-name {
     text-align: center;
@@ -60,4 +61,13 @@
       margin-bottom: px-to-rem(5);
     }
   }
+}
+
+.close-btn {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
 }
