@@ -42,6 +42,15 @@ const randomCDKeyThree: Item = {
   cdKey: "3-1-337"
 };
 
+const randomCDKeyFour: Item = {
+  id: 5,
+  name: "Steam CD-Key (Legendary)",
+  image: "/assets/sampleReward.png",
+  group: "Nagrody",
+  value: 999,
+  cdKey: "a-e-z4-km1"
+};
+
 const chests: Group = {
   name: "Skrzynie",
   slots: [
@@ -121,4 +130,4 @@ const rewards: Group = {
 };
 
 export const db = [chests, runes, rewards];
-export const prizePool = [randomCDKeyOne, randomCDKeyTwo, randomCDKeyThree];
+export const prizePool = [randomCDKeyThree, randomCDKeyFour];

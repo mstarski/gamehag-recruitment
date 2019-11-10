@@ -14,5 +14,13 @@
       background-size: cover;
       cursor: pointer;
     }
+
+    &--empty {
+      border-color: #060809;
+    }
+
+    &--selected {
+      border-color: #ffbd00;
+    }
   }
 }

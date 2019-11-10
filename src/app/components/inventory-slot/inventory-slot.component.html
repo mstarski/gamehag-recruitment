@@ -4,6 +4,7 @@
   (click)="selectSlot($event, props.item)"
   *ngIf="props.item"
   [ngStyle]="{ 'background-image': 'url(' + props.item.image + ')' }"
+  [ngClass]="{ 'inventory-group__list-item--selected': isSelected }"
 ></li>
 
 <!-- Empty slot -->

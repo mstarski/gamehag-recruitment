@@ -14,9 +14,18 @@ export class InventorySlotComponent implements OnInit {
   @Input()
   props: Slot;
 
+  isSelected: boolean = false;
+
   selectSlot(_: MouseEvent, data: Item): void {
     this.actionService.selectItem(data);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (this.props.item)
+      this.actionService.selectedItem.subscribe(
+        selectedItem =>
+          (this.isSelected =
+            selectedItem && this.props.item.id === selectedItem.id)
+      );
+  }
 }
