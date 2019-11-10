@@ -21,11 +21,11 @@ export class InventorySlotComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (this.props.item)
-      this.actionService.selectedItem.subscribe(
-        selectedItem =>
-          (this.isSelected =
-            selectedItem && this.props.item.id === selectedItem.id)
-      );
+    this.actionService.selectedItem.subscribe(selectedItem => {
+      this.isSelected =
+        this.props.item &&
+        selectedItem &&
+        selectedItem.id === this.props.item.id;
+    });
   }
 }

@@ -9,7 +9,7 @@ export class RewardingService {
   constructor() {}
 
   lootFromChest(): Item {
-    const randomIndex = Math.floor(Math.random() * 3);
+    const randomIndex = Math.floor(Math.random() * prizePool.length);
     return prizePool[randomIndex];
   }
 }
