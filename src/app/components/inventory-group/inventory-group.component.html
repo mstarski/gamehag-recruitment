@@ -2,6 +2,12 @@
   <p class="inventory-group__header">
     {{ groupName }}
   </p>
+
+  <p class="value-info" *ngIf="groupName === 'Nagrody'">
+    <span class="value-info__text">WARTOSC&asymp;</span>
+    <span class="value-info__value">${{ getItemsValue() }}</span>
+  </p>
+
   <ul class="inventory-group__list">
     <app-inventory-slot
       *ngFor="let slot of slots"

@@ -22,6 +22,15 @@ export class InventoryGroupComponent implements OnInit {
       .subscribe(slots => (this.slots = slots));
   }
 
+  getItemsValue(): number | null {
+    if (this.groupName !== "Nagrody") return null;
+    let totalValue = 0;
+    for (const slot of this.slots) {
+      if (slot.item) totalValue += slot.item.value;
+    }
+    return totalValue;
+  }
+
   ngOnInit() {
     this.getSlots();
   }

@@ -20,3 +20,16 @@
     }
   }
 }
+
+.value-info {
+  text-align: center;
+  margin-top: px-to-rem(10);
+
+  &__text {
+    color: #72919e;
+  }
+
+  &__value {
+    color: #fff;
+  }
+}
