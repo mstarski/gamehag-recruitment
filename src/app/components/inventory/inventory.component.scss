@@ -1,4 +1,10 @@
 .inventory {
-  min-height: 100vh;
+  height: 100vh;
+  overflow: auto;
   background: #1a2326;
+
+  @media (max-width: 825px) {
+    height: auto;
+    display: flex;
+  }
 }

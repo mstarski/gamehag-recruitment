@@ -13,5 +13,10 @@
     grid-gap: 1rem;
     margin-top: 1rem;
     justify-content: center;
+
+    @media (max-width: 825px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 }
